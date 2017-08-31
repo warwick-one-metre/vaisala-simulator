@@ -81,6 +81,8 @@ void tick()
         queue_bytes(buf, len);
         len = snprintf(buf, 16, "Rc=%0.2fM,", data.Rc);
         queue_bytes(buf, len);
+        len = snprintf(buf, 16, "Ri=%0.1fM,", data.Ri);
+        queue_bytes(buf, len);
         len = snprintf(buf, 16, "Th=%0.1fC,", data.Th);
         queue_bytes(buf, len);
         len = snprintf(buf, 16, "Vh=%0.1fN", data.Vh);
@@ -122,6 +124,7 @@ int main()
     measurement_init(&data.Ua, relative_humidity, timescale);
     measurement_init(&data.Pa, air_pressure, timescale);
     data.Rc = rain_accumulation;
+    data.Ri = 0;
     data.Th = heater_temperature;
     data.Vh = heater_voltage;
 

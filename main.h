@@ -49,6 +49,7 @@ struct weather_data
     struct measurement Ua; // Relative humidity (%)
     struct measurement Pa; // Air pressure (hPa)
     float Rc; // Rain accumulation (mm)
+    float Ri; // Rain intensity (mm)
     float Th; // Heater temperature (deg C)
     float Vh; // Heater voltage (V)
 };
