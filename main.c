@@ -100,7 +100,7 @@ int main()
     TCCR1B = _BV(CS12) | _BV(CS10) | _BV(WGM12);
     TIMSK1 |= _BV(OCIE1B);
 
-#define BAUD 9600
+#define BAUD 4800
 #include <util/setbaud.h>
     UBRR0H = UBRRH_VALUE;
     UBRR0L = UBRRL_VALUE;
